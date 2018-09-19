@@ -1,12 +1,10 @@
 const AWS = require('aws-sdk')
 
-const keys = require('../config/keys')
-
 AWS.config.update({
   region: 'us-east-1',
   endpoint: 'http://localhost:8000',
-  accessKeyId: keys.access_ID,
-  secretAccessKey: keys.access_KEY
+  accessKeyId: 'default',
+  secretAccessKey: 'default'
 })
 
 const dynamodb = new AWS.DynamoDB()
